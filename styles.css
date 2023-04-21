@@ -1,0 +1,233 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-size: 1.2rem;
+}
+
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+    height: 100vh;
+    background:linear-gradient(200deg,gold, #fbb038);
+
+}
+
+.signature{
+    display: flex;
+    justify-content: space-between;
+}
+
+.signature p:first-child{
+    font-size: .8rem;
+    color: rgb(6, 201, 201);
+    opacity: .6;
+}
+
+
+.signature p:last-child{
+    font-size: .8rem;
+    border: solid 1px rgba(255, 0, 0, .2);
+    border-radius: 30px;
+    height: 2px;
+    width: 10px;
+    padding: 3px;
+}
+
+.on{
+    animation: on 2s ease-out 1s infinite;
+    border-color:rgba(173, 255, 47, .2) ;
+    background-color:rgba(173, 255, 47, .2) ;
+}
+
+.off{
+    animation: off 2s ease-out 1s infinite;
+    border-color:rgba(255, 0, 0, .2) ;
+    background-color:rgba(255, 0, 0, .2);
+}
+#container{
+    border: solid 1px rgba(0, 0, 0, .5);
+    border-radius: 10px;
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    background: rgb(33, 33, 33);
+    box-shadow: 7px 11px 8px 9px rgba(0, 0, 0, .2);
+}
+
+#screen{
+    border: 1px inset black;
+    margin-block: 5px 10px;
+    height: 5em;
+    background: rgba(20, 78, 78, .5);
+    color: white; 
+    padding: 3px 5px;
+    display: flex;
+    flex-wrap: wrap;
+    word-wrap: break-word;
+    width: 210px;
+    overflow-x: auto;
+    opacity: .2;
+}
+
+
+#keys{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(5, 1fr);
+    width: 210px;
+    height: 280px;
+    grid-template-areas: 
+        "seven height nine remainder"
+        "four five six multiplication"
+        "one two three division"
+        "dot zero add less"
+        "reset  back equal equal" 
+    ;
+    gap: 10px;
+}
+
+.all_keys{
+    border-radius: 50%;
+    border: none;
+    box-shadow: 1px 1px 2px 2px rgba(0, 0, 0, .5);
+    background: rgba(97, 97, 97, .5);
+    color: white;
+    outline: none;
+}
+
+.all_keys:hover{
+    background:rgba(97, 97, 97, 1);
+    transform: translateY(-3px);
+}
+
+.back:hover, .reset:hover, .add:hover,.remainder:hover, .less:hover, .division:hover, .multiplication:hover{
+    background: gold;
+}
+.back:hover, .reset:hover{
+    background: teal;
+}
+
+#equal{
+    border-radius: 100px;
+
+}
+
+#equal:hover{
+    background: greenyellow;
+}
+
+.one{
+    grid-area: one;
+}
+
+.two{
+    grid-area: two;
+}
+
+.three{
+    grid-area: three;
+}
+
+.four{
+    grid-area: four;
+}
+
+.five{
+    grid-area: five;
+}
+
+.six{
+    grid-area: six;
+}
+
+.seven{
+    grid-area: seven;
+}
+
+.height{
+    grid-area: height;
+}
+
+.nine{
+    grid-area: nine;
+}
+
+.zero{
+    grid-area: zero;
+}
+
+.dot{
+    grid-area: dot;
+}
+
+.reset{
+    grid-area: reset;
+}
+
+.back{
+    grid-area: back;
+}
+
+.equal{
+    grid-area: equal;
+}
+
+.add{
+    grid-area: add;
+}
+
+.less{
+    grid-area: less;
+}
+
+.division{
+    grid-area: division;
+}
+
+.multiplication{
+    grid-area: multiplication;
+}
+.remainder{
+    grid-area: remainder;
+}
+
+@keyframes on {
+    0%{
+        border-color:rgba(173, 255, 47, .2) ;
+        background-color:rgba(173, 255, 47, .2) ;
+    }
+    50%{
+        border-color:rgba(173, 255, 47, .6) ;
+        background-color:rgba(173, 255, 47, .6) ;
+    }
+    100%{
+        border-color:rgba(173, 255, 47, 1) ;
+        background-color:rgba(173, 255, 47, 1) ;
+    }
+}
+@keyframes off {
+    0%{
+        border-color:rgba(255,0,0, .2) ;
+        background: rgba(255,0,0, .2);
+        padding: 3px;
+    }
+    50%{
+        border-color:rgba(255,0,0, .6) ;
+        background-color:rgba(255,0,0, .6) ;
+        padding: 4px;
+    }
+    100%{
+        border-color:rgba(255,0,0, 1) ;
+        background-color:rgba(255,0,0, 1) ;
+        padding: 5px;
+    }
+}
+
+footer{
+    font-size: .9rem;
+    margin-top: 1em;
+}
